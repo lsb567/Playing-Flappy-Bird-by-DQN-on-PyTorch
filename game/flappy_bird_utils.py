@@ -1,5 +1,7 @@
 import pygame
 import sys
+
+
 def load():
     # path of player with different states
     PLAYER_PATH = (
@@ -76,6 +78,7 @@ def load():
     )
 
     return IMAGES, SOUNDS, HITMASKS
+
 
 def getHitmask(image):
     """returns a hitmask using an image's alpha."""
