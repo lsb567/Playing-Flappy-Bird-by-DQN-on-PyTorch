@@ -3,7 +3,7 @@ import cv2
 import sys
 import os
 sys.path.append("game/")
-import wrapped_flappy_bird as game
+import game.wrapped_flappy_bird as game
 import random
 import numpy as np
 from collections import deque
@@ -25,10 +25,12 @@ UPDATE_TIME = 100
 width = 80
 height = 80
 
+
 def preprocess(observation):
     observation = cv2.cvtColor(cv2.resize(observation, (80, 80)), cv2.COLOR_BGR2GRAY)
     ret, observation = cv2.threshold(observation,1,255,cv2.THRESH_BINARY)
     return np.reshape(observation, (1,80,80))
+
 
 class DeepNetWork(nn.Module):
     def __init__(self,):

@@ -103,6 +103,7 @@ class GameState:
             uPipe['x'] += self.pipeVelX
             lPipe['x'] += self.pipeVelX
 
+
         # add new pipe when first pipe is about to touch left of screen
         if 0 < self.upperPipes[0]['x'] < 5:
             newPipe = getRandomPipe()
